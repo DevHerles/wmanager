@@ -1,0 +1,17 @@
+Xft.dpi: 144
+
+urxvt*scrollBar: false
+urxvt*scrollBar_right: true
+urxvt*scrollColor: #000000
+urxvt*depth: 32
+urxvt.internalBorder: 4
+urxvt*background: [80]#101015
+urxvt*borderColor: [80]#101015
+urxvt*foreground: #b2b2b2
+
+urxvt*font: xft:Monaco for Powerline:pixelsize=18
+
+Xcursor.theme: Breeze_Default
+Xcursor.size: 24
+
+#--${content}

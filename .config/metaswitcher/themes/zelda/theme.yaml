@@ -1,0 +1,103 @@
+name: "firewatch"
+
+startup:
+  - "i3-msg restart"
+  - "killall -USR1 termite"
+  - "feh --bg-fill 'bg.png'"
+  - "xrdb -load ~/.Xresources"
+
+variables:
+
+  # Black
+  col0  : &color0  "#2e282e"
+  col8  : &color8  "#403741"
+
+  # Red
+  col1  : &color1  "#e75545"
+  col9  : &color9  "#ff7e70"
+
+  # Green
+  col2  : &color2  "#73e458"
+  col10 : &color10 "#a9fc95"
+
+  # Yellow
+  col3  : &color3  "#fde12f"
+  col11 : &color11 "#ffed79"
+
+  # Blue
+  col4  : &color4  "#63cae6"
+  col12 : &color12 "#a4ebfe"
+
+  # Magenta
+  col5  : &color5  "#913F69"
+  col13 : &color13 "#b25685"
+
+  # Cyan
+  col6  : &color6  "#2dccb8"
+  col14 : &color14 "#70ecdd"
+
+  # White
+  col7  : &color7  "#bfb2c1"
+  col15 : &color15 "#fef4ff"
+
+  colFg        : &colorFg "#C8C5C8"
+  colBg        : &colorBg "#201d21"
+  colHighlight : &colorHighlight "#553035"
+  colCursor    : &colorCursor "#c8c5c8"
+
+  colPrimary    : &colorPrimary "#C94F34"
+  colBackground : "#000000"
+
+  ## Bar colors
+  
+  # Bottom bar
+  colBottomBarFg     : &colorBottomBarFg "#000"
+  colBottomBarBg     : "#00ffffff"
+  colBottomBarShaded : "#15ffffff"
+ 
+  # Top bar
+  colTopBarFg     : &colorTopBarFg "#000"
+  colTopBarBg     : "#00ffffff"
+  colTopBarShaded : "#15ffffff"
+
+  colBarVolume              : *colorTopBarFg
+  colBarVolumeMax           : *colorTopBarFg
+  colBarVolumeMute          : *colorTopBarFg
+  colBarVolumeIndicator     : *colorTopBarFg
+
+  colBarBrightness          : *colorTopBarFg
+  colBarBrightnessIndicator : *colorTopBarFg
+
+  colBarWlanIndicator       : *colorTopBarFg
+
+  colBarBattery             : *color1
+  colBarBatteryCharging     : *color1
+
+  colBarTemperature         : *colorBottomBarFg
+  colBarTemperatureWarn     : *color9
+
+  bgTerminal    : "rgba(32, 29, 33, 0.9)"
+  hiTerminal    : "#553035"
+
+  bgFocused     : *colorPrimary
+  bFocused      : *colorPrimary
+  tFocused      : "#FFFFFF"
+
+  bgUnfocused   : "#333333"
+  bUnfocused    : "#222222"
+  tUnfocused    : "#888888"
+
+  bgInactive    : "#222222"
+  bInactive     : "#5F676A"
+  tInactive     : "#FFFFFF"
+
+  bgUrgent      : "#222222"
+  bUrgent       : "#900000"
+  tUrgent       : "#FFFFFF"
+
+  bgPlaceholder : "#000000"
+  bPlaceholder  : "#0C0C0C"
+  tPlaceholder  : "#FFFFFF"
+
+  colTest       : "#FF0000"
+  gapsInner     : "25"

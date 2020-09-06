@@ -1,0 +1,2 @@
+# wmanager
+Window manager dotfiles

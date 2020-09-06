@@ -1,0 +1,107 @@
+name: "firewatch"
+
+startup:
+  - "i3-msg restart"
+  - "killall -USR1 termite"
+  - "feh --bg-fill 'background.png'"
+  - "xrdb -load ~/.Xresources"
+  # - "sh polybar.sh"
+
+
+
+variables:
+  gapsInner : "20"
+  gapsOuter : "15"
+
+  ## Colors
+  #########
+
+  # Black
+  col0  : &color0  "#2e282e"
+  col8  : &color8  "#403741"
+
+  # Red
+  col1  : &color1  "#457ac4"
+  col9  : &color9  "#CA407E"
+
+  # Green
+  col2  : &color2  "#a8aabd"
+  col10 : &color10 "#a8aabd"
+
+  # Yellow
+  col3  : &color3  "#95ee8f"
+  col11 : &color11 "#95ee8f"
+
+  # Blue
+  col4  : &color4  "#a8aabd"
+  col12 : &color12 "#FFDCC8"
+
+  # Magenta
+  col5  : &color5  "#d886f3"
+  col13 : &color13 "#d886f3"
+
+  # Cyan
+  col6  : &color6  "#6eaafb"
+  col14 : &color14 "#6eaafb"
+
+  # White
+  col7  : &color7  "#E8E2DB"
+  col15 : &color15 "#F7EDE2"
+
+  colPrimary      : &colorPrimary "#6eaafb"
+  colPrimaryFaded : &colorPrimaryFaded "#cc6eaafb"
+  colAccent       : &colorAccent "#f8c456"
+  colBackground   : "#000000"
+
+  colFg        : &colorFg "#E9DDCF"
+  colBg        : &colorBg "#201D21"
+  colHighlight : &colorHighlight "#553035"
+  colCursor    : &colorCursor "#c8c5c8"
+  colFocus     : *colorPrimaryFaded
+
+  ## Bar colors
+  
+  # Bottom bar
+  colBottomBarFg     : "#70ffffff"
+  colBottomBarBg     : "#00ffffff"
+  colBottomBarShaded : "#15ffffff"
+ 
+  # Top bar
+  colTopBarFg     : "#70ffffff"
+  colTopBarBg     : "#00ffffff"
+  colTopBarShaded : "#15ffffff"
+
+  colBarVolume          : *colorPrimaryFaded
+  colBarVolumeMax       : *colorPrimaryFaded
+  colBarVolumeMute      : *colorAccent
+  colBarVolumeIndicator : *colorPrimaryFaded
+
+  colBarBrightness          : *colorPrimaryFaded
+  colBarBrightnessIndicator : *colorPrimaryFaded
+
+  colBarBatteryWarn : *colorAccent
+
+  bgTerminal    : "rgba(32, 29, 33, 0.9)"
+  hiTerminal    : "#553035"
+
+  bgFocused     : *colorPrimary
+  bFocused      : "#000000" 
+  tFocused      : "#FFFFFF"
+
+  bgUnfocused   : "#333333"
+  bUnfocused    : "#222222"
+  tUnfocused    : "#888888"
+
+  bgInactive    : "#222222"
+  bInactive     : "#5F676A"
+  tInactive     : "#FFFFFF"
+
+  bgUrgent      : "#222222"
+  bUrgent       : "#900000"
+  tUrgent       : "#FFFFFF"
+
+  bgPlaceholder : "#000000"
+  bPlaceholder  : "#0C0C0C"
+  tPlaceholder  : "#FFFFFF"
+
+  colTest       : "#FF0000"
