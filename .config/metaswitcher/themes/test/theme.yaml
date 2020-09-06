@@ -1,0 +1,66 @@
+name: "test"
+
+startup:
+  - "i3-msg restart"
+  - "killall -USR1 termite"
+  - "feh --bg-fill 'background.jpg'"
+  - "xrdb -load ~/.Xresources"
+
+variables:
+  col0  : &color0  "#373B41"
+  col1  : &color1  "#373B41"
+  col2  : &color2  "#719669"
+  col3  : &color3  "#f4bf75"
+  col4  : &color4  "#6a9fb5"
+  col5  : &color5  "#aa759f"
+  col6  : &color6  "#75b5aa"
+  col7  : &color7  "#d0d0d0"
+  col8  : &color8  "#505050"
+  col9  : &color9  "#ac4142"
+  col10 : &color10 "#719669"
+  col11 : &color11 "#f4bf75"
+  col12 : &color12 "#6a9fb5"
+  col13 : &color13 "#aa759f"
+  col14 : &color14 "#75b5aa"
+  col15 : &color15 "#f5f5f5"
+
+  colPrimary    : &colorPrimary "#719669"
+  colBackground : "#000000"
+
+  # Bar colors
+  colBarVolume     : *color10
+  colBarVolumeMax  : *color9
+  colBarVolumeMute : *color9
+
+  colBarBrightness : *color13
+
+  colBarFg     : "#80ffffff"
+  colBarBg     : "#00ffffff"
+  colBarShaded : "#15ffffff"
+
+  colBarBatteryWarn : *color9
+
+  bgTerminal    : "rgba(21, 21, 21, 0.88)"
+
+  bgFocused     : *colorPrimary
+  bFocused      : *colorPrimary
+  tFocused      : "#FFFFFF"
+
+  bgUnfocused   : "#333333"
+  bUnfocused    : "#222222"
+  tUnfocused    : "#888888"
+
+  bgInactive    : "#222222"
+  bInactive     : "#5F676A"
+  tInactive     : "#FFFFFF"
+
+  bgUrgent      : "#222222"
+  bUrgent       : "#900000"
+  tUrgent       : "#FFFFFF"
+
+  bgPlaceholder : "#000000"
+  bPlaceholder  : "#0C0C0C"
+  tPlaceholder  : "#FFFFFF"
+
+  colTest       : "#FF0000"
+  gapsInner     : "25"
