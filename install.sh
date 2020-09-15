@@ -66,6 +66,15 @@ function setupPolybar() {
 
 }
 
+function installCompton() {
+  git clone https://github.com/chjj/compton.git
+  cd compton
+  make
+  make docs
+  make install
+  ln -s $INSTALL_PATH/compton/compton.conf ~/.config/compton.conf -f
+}
+
 function setupWallpaperFolder() {
   [ -d "$HOME/.config/wallpapers" ] && echo "wallpapers dir exists..." || mkdir $HOME/.config/wallpapers
   ln -s $INSTALL_PATH/wallpapers/night_mountains_snow_sky_stars.jpg ~/.config/wallpapers -f
