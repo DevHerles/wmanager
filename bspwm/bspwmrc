@@ -1,6 +1,6 @@
 #! /bin/sh
 
-feh --bg-scale $HOME/.config/wallpapers/night_mountains_snow_sky_stars.jpg
+feh --bg-scale --randomize $HOME/.config/wallpapers/*
 pgrep -x sxhkd > /dev/null || sxhkd &
 compton &
 
@@ -23,6 +23,7 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a konsole desktop='^1'
 bspc rule -a youtube-music-desktop-app desktop='^2'
 bspc rule -a Spotify desktop='^2'
+bspc rule -a Anydesk desktop='^3'
 bspc rule -a Google-chrome desktop='^9'
 bspc rule -a Firefox desktop='^10'
 bspc rule -a mplayer2 state=floating

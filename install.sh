@@ -66,8 +66,8 @@ function setupPolybar() {
 }
 
 function setupWallpaperFolder() {
-  [ -d "$HOME/.config/wallpapers" ] && echo "wallpapers dir exists..." || mkdir $HOME/.config/wallpapers
-  ln -s $INSTALL_PATH/wallpapers/night_mountains_snow_sky_stars.jpg ~/.config/wallpapers -f
+  [ -d "$HOME/.config/wallpapers" ] && rm -rf $HOME/.config/wallpapers
+  ln -s $INSTALL_PATH/wallpapers ~/.config/wallpapers -f
 }
 echo $INSTALL_PATH
 installDependencies
