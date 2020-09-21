@@ -6,6 +6,10 @@
 super + Return
 	konsole
 
+# Rotate the windows 90 degrees in any direction
+super + {comma,period}
+	bspc node @/ -R {90,270}
+
 # program launcher
 super + e
 	dmenu_run
@@ -116,6 +120,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Swap this windows with the last focused
+super + apostrophe
+	bspc node -s last
 
 #
 # preselect
