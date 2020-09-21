@@ -7,9 +7,31 @@ super + Return
 	konsole
 
 # program launcher
-super + @space
+super + e
 	dmenu_run
 	# /home/herles/asfdev/wmanager/polybar/scripts/menu_full
+
+super + @space
+	rofi -no-lazy-grab -show drun \
+	-display-drun "Applications :" \
+	-hide-scrollbar true \
+	-bw 0 \
+	-lines 10 \
+	-line-padding 15 \
+	-padding 60 \
+	-width 30 \
+	-xoffset 10 -yoffset 40 \
+	-location 1 \
+	-fullscreen \
+	-columns 4 \
+	-show-icons -icon-theme "Papirus" \
+	-font "Fantasque Sans Mono 10" \
+	-color-enabled true
+
+
+# program launcher
+super + d
+    j4-dmenu-desktop --dmenu='rofi -dmenu -m 0 -lines 6 -i -sort -p RUN' --no-generic
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -48,6 +70,10 @@ super + f
 #
 # state/flags
 #
+
+# screenshot
+super + Print
+    flameshot gui
 
 # set the window state
 super + {t,shift + t,s,f}
