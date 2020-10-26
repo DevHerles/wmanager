@@ -19,11 +19,12 @@ bspc config gapless_monocle      true
 bspc config automatic_scheme spiral
 
 # xprop | grep WM_CLASS
-bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a konsole desktop='^1'
 bspc rule -a youtube-music-desktop-app desktop='^2'
 bspc rule -a Spotify desktop='^2'
 bspc rule -a Anydesk desktop='^3'
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a jetbrains-idea-ce desktop='^8'
 bspc rule -a Google-chrome desktop='^9'
 bspc rule -a Firefox desktop='^10'
 bspc rule -a mplayer2 state=floating
