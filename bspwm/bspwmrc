@@ -5,6 +5,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 compton &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
+bspc config focused_border_color "#252b30"
+bspc config normal_border_color "#31404d"
 
 bspc config border_width         0
 bspc config window_gap           0
@@ -30,5 +32,7 @@ bspc rule -a Firefox desktop='^10'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+# bspc rule -a Firefox:Toolkit sticky=on state=floating desktop='^1'
+bspc rule -a firefox:Toolkit state=floating layer=above
 
 $HOME/.config/polybar/launch.sh
