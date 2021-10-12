@@ -33,6 +33,65 @@ coccupied = #1e88e5
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
+monitor = eDP-1
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = true
+bottom = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+module-margin = 0
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome5Free:style=Solid:size=11;1
+font-4 = FontAwesome5Free:style=Regular:size=11;1
+font-5 = FontAwesome5Brands:style=Regular:size=11;1
+font-6 = Symbola:style=Regular:size=11;1
+font-7 = "Fira Code:size=11;0"
+modules-left = bspwm
+modules-center = mpd
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/top_external]
+;monitor = ${env:MONITOR:HDMI-1}
+monitor = HDMI-1
 width = 100%
 height = 25
 ;offset-x = 1%
@@ -165,6 +224,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
+pin-workspaces = true
+
 fuzzy-match = true
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
