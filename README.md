@@ -21,3 +21,8 @@ HDMI-1 = External monitor
 ```bash
 xrandr --output eDP-1 --primary --mode 1600x900 --rotate normal --output HDMI-1 --mode 1920x1080 --rotate normal --right-of eDP-1
 ```
+
+ Using IntelliJ IDEA / Android Studio with bspwm?
+```bash
+wmname LG3D
+```
